@@ -50,6 +50,7 @@ module Sheepsafe
           elsif switch_to_untrusted?
             notified = false
             loop do
+<<<<<<< HEAD
               system "ssh -p #{@config.ssh_port} #{@config.ssh_host} true &> /dev/null"
               break if $?.success?
               notify_warning("Waiting for internet connection before switching") unless notified
